@@ -1,657 +1,1579 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshay SAP Institute | SAP EAM (PM) & Enhanced WCM Training</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<base target="_blank">
-</head>
-<body>
+/* ============================================
+   AKSHAY SAP INSTITUTE - STYLE.CSS
+   Premium White Theme with Professional Design
+   ============================================ */
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <img src="assets/logo.png" alt="Akshay SAP Institute" class="logo-img">
-                <div class="brand-text">
-                    <span class="brand-name">Akshay SAP Institute</span>
-                    <span class="brand-tagline">Industry-Oriented SAP Training</span>
-                </div>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#courses">Courses</a></li>
-                <li><a href="#highlights">Highlights</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="https://wa.me/916361960059" target="_blank" class="btn-whatsapp-nav">
-                    <i class="fab fa-whatsapp"></i> Enquire Now
-                </a>
-                <button class="mobile-toggle" id="mobileToggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
+/* CSS Variables */
+:root {
+    --primary: #0f766e;
+    --primary-dark: #0d5f58;
+    --primary-light: #14b8a6;
+    --accent: #f59e0b;
+    --accent-light: #fbbf24;
+    --text-dark: #1e293b;
+    --text-medium: #475569;
+    --text-light: #64748b;
+    --bg-white: #ffffff;
+    --bg-light: #f8fafc;
+    --bg-card: #ffffff;
+    --border: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+    --shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    --radius-sm: 8px;
+    --radius: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-bg">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-rocket"></i>
-                    <span>Industry-Oriented SAP S/4HANA Training</span>
-                </div>
-                <h1 class="hero-title">
-                    Master <span class="highlight">SAP EAM (PM)</span> & <br>
-                    <span class="highlight">Enhanced WCM</span> Training
-                </h1>
-                <p class="hero-subtitle">
-                    Comprehensive 3-Month Training with Real-Time Scenarios, Hands-On Practical Sessions & Career Mentoring
-                </p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">7+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">6+</span>
-                        <span class="stat-label">Years in SAP EAM</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3</span>
-                        <span class="stat-label">Months Duration</span>
-                    </div>
-                </div>
-                <div class="hero-cta">
-                    <a href="https://wa.me/916361960059" target="_blank" class="btn btn-primary">
-                        <i class="fab fa-whatsapp"></i> Enquire on WhatsApp
-                    </a>
-                    <a href="#courses" class="btn btn-outline">
-                        <i class="fas fa-book-open"></i> Explore Course
-                    </a>
-                </div>
-                <div class="hero-companies">
-                    <p>Placement Network</p>
-                    <div class="company-logos">
-                        <span class="company-name">Infosys</span>
-                        <span class="company-name">PwC</span>
-                        <span class="company-name">Capgemini</span>
-                        <span class="company-name">Accenture</span>
-                        <span class="company-name">TCS</span>
-                        <span class="company-name">Tech Mahindra</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll Down</span>
-        </div>
-    </section>
+/* Reset & Base */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-user-tie"></i> About the Trainer</span>
-                <h2 class="section-title">Meet Your <span class="highlight">Expert Trainer</span></h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <img src="assets/trainer.jpg" alt="Akshay - SAP EAM Trainer">
-                        <div class="experience-badge">
-                            <span class="exp-number">7+</span>
-                            <span class="exp-text">Years<br>Experience</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-content">
-                    <h3>Akshay</h3>
-                    <p class="about-role">SAP EAM / PM Consultant & Trainer</p>
-                    <div class="about-highlights">
-                        <div class="about-item">
-                            <div class="about-icon"><i class="fas fa-briefcase"></i></div>
-                            <div class="about-text">
-                                <h4>7+ Years Overall Industry Experience</h4>
-                                <p>Extensive background in IT and SAP consulting across multiple industries</p>
-                            </div>
-                        </div>
-                        <div class="about-item">
-                            <div class="about-icon"><i class="fas fa-cogs"></i></div>
-                            <div class="about-text">
-                                <h4>6+ Years in SAP EAM / PM</h4>
-                                <p>Deep expertise in SAP Enterprise Asset Management and Plant Maintenance modules</p>
-                            </div>
-                        </div>
-                        <div class="about-item">
-                            <div class="about-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                            <div class="about-text">
-                                <h4>Industry-Oriented Training Approach</h4>
-                                <p>Real-time project scenarios with hands-on practical sessions</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-contact">
-                        <a href="https://wa.me/916361960059" target="_blank" class="btn btn-primary">
-                            <i class="fab fa-whatsapp"></i> +91 63619 60059
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
 
-    <!-- Course Duration Banner -->
-    <section class="duration-banner">
-        <div class="container">
-            <div class="duration-content">
-                <div class="duration-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <div class="duration-text">
-                    <h3>Course Duration</h3>
-                    <p><strong>3 Months</strong> — Comprehensive Training with Real-Time Scenarios</p>
-                </div>
-                <a href="https://wa.me/916361960059" target="_blank" class="btn btn-light">
-                    <i class="fab fa-whatsapp"></i> Get Started
-                </a>
-            </div>
-        </div>
-    </section>
+body {
+    font-family: var(--font);
+    color: var(--text-dark);
+    background: var(--bg-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-    <!-- Course Highlights -->
-    <section class="highlights" id="highlights">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-star"></i> Course Curriculum</span>
-                <h2 class="section-title">Course <span class="highlight">Highlights</span></h2>
-                <p class="section-desc">A comprehensive curriculum designed for real-world SAP implementation success</p>
-            </div>
-            <div class="highlights-grid">
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-server"></i></div>
-                    <h4>SAP S/4HANA Architecture</h4>
-                    <p>Deep dive into S/4HANA architecture, in-memory computing, and digital core concepts</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-exchange-alt"></i></div>
-                    <h4>Front-End & Back-End Process Flow</h4>
-                    <p>Complete understanding of end-to-end process flows and system interactions</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-desktop"></i></div>
-                    <h4>SAP Fiori & SAP GUI</h4>
-                    <p>Hands-on with modern Fiori UX and classic SAP GUI interfaces</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-cloud"></i></div>
-                    <h4>SAP Gateway & OData Concepts</h4>
-                    <p>Integration concepts, OData services, and Gateway architecture</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-database"></i></div>
-                    <h4>Database & Data Flow</h4>
-                    <p>Understanding HANA database, data modeling, and flow architecture</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-cogs"></i></div>
-                    <h4>Backend Configuration (SPRO)</h4>
-                    <p>Complete SPRO configuration for EAM and PM modules</p>
-                </div>
-                <div class="highlight-card featured">
-                    <div class="highlight-icon"><i class="fas fa-tools"></i></div>
-                    <h4>SAP EAM (Plant Maintenance)</h4>
-                    <p>Complete PM module covering work orders, notifications, maintenance plans, and more</p>
-                </div>
-                <div class="highlight-card featured">
-                    <div class="highlight-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h4>Enhanced Work Clearance Management</h4>
-                    <p>WCM processes, safety permits, lockout-tagout, and industrial safety integration</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-code"></i></div>
-                    <h4>ABAP for Functional Consultants</h4>
-                    <p>Essential ABAP concepts every functional consultant should know</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-bug"></i></div>
-                    <h4>Debugging, User Exits & BAdIs</h4>
-                    <p>Advanced debugging techniques, enhancement framework, and custom developments</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-plug"></i></div>
-                    <h4>APIs, IDocs & Integrations</h4>
-                    <p>System integration using APIs, IDoc processing, and middleware concepts</p>
-                </div>
-                <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-project-diagram"></i></div>
-                    <h4>Real-Time Implementation Scenarios</h4>
-                    <p>Live project scenarios from actual SAP implementations and support cases</p>
-                </div>
-            </div>
-        </div>
-    </section>
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    <!-- Why Join Section -->
-    <section class="why-join" id="courses">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-trophy"></i> Why Choose Us</span>
-                <h2 class="section-title">Why <span class="highlight">Join Us?</span></h2>
-            </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h4>Real-Time Project Scenarios</h4>
-                    <p>Learn from actual industry projects and real-world business cases, not just theory</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-hands"></i></div>
-                    <h4>Hands-On Practical Sessions</h4>
-                    <p>Every concept is backed by hands-on exercises in a live SAP system environment</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-sitemap"></i></div>
-                    <h4>End-to-End Business Process</h4>
-                    <p>Understand complete business processes from requirement gathering to go-live support</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-industry"></i></div>
-                    <h4>Industry-Oriented Training</h4>
-                    <p>Training aligned with current industry standards, tools, and best practices</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-file-alt"></i></div>
-                    <h4>Resume Building & Guidance</h4>
-                    <p>Professional resume building with industry-specific keywords and formatting</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-comments"></i></div>
-                    <h4>Mock Interviews & Mentoring</h4>
-                    <p>Prepare with mock interviews, technical Q&A sessions, and career mentoring</p>
-                </div>
-                <div class="why-card wide">
-                    <div class="why-icon"><i class="fas fa-handshake"></i></div>
-                    <h4>Resume Referral Support</h4>
-                    <p>Direct referral support to hiring companies including Infosys, PwC, Capgemini, Accenture, TCS, Tech Mahindra and other MNCs based on openings and profile suitability</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ul {
+    list-style: none;
+}
 
-    <!-- Referral Network -->
-    <section class="referral-network">
-        <div class="container">
-            <div class="section-header light">
-                <span class="section-tag"><i class="fas fa-building"></i> Placement Partners</span>
-                <h2 class="section-title">Potential <span class="highlight">Referral Network</span></h2>
-                <p class="section-desc">Get referred to top MNCs and consulting organizations</p>
-            </div>
-            <div class="referral-grid">
-                <div class="referral-card">
-                    <div class="referral-logo"><i class="fas fa-building"></i></div>
-                    <h4>Infosys</h4>
-                </div>
-                <div class="referral-card">
-                    <div class="referral-logo"><i class="fas fa-building"></i></div>
-                    <h4>PwC</h4>
-                </div>
-                <div class="referral-card">
-                    <div class="referral-logo"><i class="fas fa-building"></i></div>
-                    <h4>Capgemini</h4>
-                </div>
-                <div class="referral-card">
-                    <div class="referral-logo"><i class="fas fa-building"></i></div>
-                    <h4>Accenture</h4>
-                </div>
-                <div class="referral-card">
-                    <div class="referral-logo"><i class="fas fa-building"></i></div>
-                    <h4>Tech Mahindra</h4>
-                </div>
-                <div class="referral-card">
-                    <div class="referral-logo"><i class="fas fa-building"></i></div>
-                    <h4>TCS</h4>
-                </div>
-                <div class="referral-card wide">
-                    <div class="referral-logo"><i class="fas fa-globe"></i></div>
-                    <h4>Other MNCs & Consulting Organizations</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+img {
+    max-width: 100%;
+    display: block;
+}
 
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-question-circle"></i> Got Questions?</span>
-                <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What is the duration of the SAP EAM (PM) & Enhanced WCM training course?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The comprehensive training program spans <strong>3 months</strong>, covering all modules with real-time scenarios and hands-on practical sessions. The course is designed to take you from fundamentals to advanced implementation concepts.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Who is this course suitable for?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>This course is ideal for:
-                        <br>• Fresh graduates looking to start a career in SAP
-                        <br>• Working professionals seeking to switch to SAP EAM/PM
-                        <br>• Functional consultants wanting to enhance their SAP skills
-                        <br>• IT professionals interested in Asset Management modules
-                        <br>• Anyone with a basic understanding of business processes</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What topics are covered in the SAP EAM (PM) module?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The SAP EAM (Plant Maintenance) module covers:
-                        <br>• Organizational Structure & Master Data
-                        <br>• Equipment & Functional Location Management
-                        <br>• Maintenance Notifications & Work Orders
-                        <br>• Preventive Maintenance & Maintenance Plans
-                        <br>• Task Lists & BOMs
-                        <br>• Refurbishment & Warranty Management
-                        <br>• PM-IS (Information System) & Reporting
-                        <br>• Integration with MM, PP, QM, and PS modules</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What is Enhanced Work Clearance Management (WCM)?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Enhanced Work Clearance Management (WCM) is a critical safety module in SAP EAM that manages:
-                        <br>• Safety permits and work approvals
-                        <br>• Lockout-Tagout (LOTO) procedures
-                        <br>• Isolation management for equipment maintenance
-                        <br>• Safety certificate processing
-                        <br>• Integration with operational processes
-                        <br>• Compliance with industrial safety standards
-                        <br>This is especially important for industries like Oil & Gas, Power, Chemicals, and Manufacturing.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Will I get hands-on access to an SAP system?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! The training includes extensive <strong>hands-on practical sessions</strong> on a live SAP S/4HANA system. You will practice real-time configurations, create master data, process transactions, and work on end-to-end scenarios just like in a real project environment.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Do I need prior programming knowledge for this course?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No prior programming knowledge is required. The course includes <strong>ABAP Concepts for Functional Consultants</strong> — designed specifically for non-programmers. You will learn essential debugging, user exits, BAdIs, and basic ABAP concepts needed to understand and communicate with technical teams effectively.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What is the training mode — online or offline?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The training is conducted in <strong>live online sessions</strong> with interactive participation. Each session is designed to be engaging with screen sharing, live demonstrations, Q&A, and hands-on practice. Recordings may be provided for revision purposes.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Will I receive a certificate after completing the course?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, upon successful completion of the course and assessment, you will receive a <strong>course completion certificate</strong> from Akshay SAP Institute. This certificate validates your training in SAP EAM (PM) & Enhanced WCM and can be added to your resume and LinkedIn profile.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What kind of placement support do you provide?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We provide comprehensive placement support including:
-                        <br>• <strong>Resume Building</strong> — Professional resume tailored for SAP roles
-                        <br>• <strong>Mock Interviews</strong> — Technical and HR interview preparation
-                        <br>• <strong>Career Mentoring</strong> — Guidance on career path and specialization
-                        <br>• <strong>Referral Support</strong> — Direct referrals to companies like Infosys, PwC, Capgemini, Accenture, TCS, Tech Mahindra, and other MNCs (based on openings and profile suitability)</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How is this training different from other SAP institutes?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Our training stands out because:
-                        <br>• <strong>Real-Time Scenarios</strong> — Learn from actual project cases, not just textbook theory
-                        <br>• <strong>Industry Experience</strong> — Trainer has 6+ years of hands-on SAP EAM/PM implementation experience
-                        <br>• <strong>End-to-End Coverage</strong> — From S/4HANA architecture to ABAP debugging and integrations
-                        <br>• <strong>Career Focus</strong> — Resume building, mock interviews, and referral support included
-                        <br>• <strong>Personalized Attention</strong> — Small batch sizes ensuring individual focus
-                        <br>• <strong>Post-Training Support</strong> — Continued guidance even after course completion</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What is the fee structure for the course?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>For detailed fee structure and payment options, please <strong>contact us on WhatsApp</strong> at +91 63619 60059. We offer flexible payment plans and occasional early-bird discounts. The investment is structured to provide maximum value with comprehensive training and placement support.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Can I attend a demo session before enrolling?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! We offer <strong>free demo sessions</strong> so you can experience the training quality and teaching style before making a commitment. Contact us on WhatsApp at +91 63619 60059 to schedule your demo session.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What are the career opportunities after completing this course?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>After completing this course, you can pursue roles such as:
-                        <br>• SAP EAM / PM Consultant
-                        <br>• SAP Plant Maintenance Functional Consultant
-                        <br>• SAP Asset Management Consultant
-                        <br>• SAP WCM Consultant
-                        <br>• SAP S/4HANA Functional Consultant
-                        <br>• SAP Support Consultant (EAM/PM)
-                        <br>Industries hiring include Manufacturing, Oil & Gas, Power, Chemicals, Pharmaceuticals, and Consulting firms.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>What is SAP S/4HANA and why is it important?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>SAP S/4HANA</strong> is SAP's next-generation ERP suite built on the in-memory HANA database. It offers:
-                        <br>• Real-time analytics and reporting
-                        <br>• Simplified data model (removing aggregates and indices)
-                        <br>• Modern Fiori user experience
-                        <br>• Cloud, on-premise, and hybrid deployment options
-                        <br>• Advanced technologies like AI, ML, and IoT integration
-                        <br>Most organizations are migrating from SAP ECC to S/4HANA, creating massive demand for S/4HANA-certified consultants.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do I enroll in the course?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Enrolling is simple:
-                        <br>1. <strong>Contact us</strong> on WhatsApp at +91 63619 60059
-                        <br>2. <strong>Attend a free demo</strong> session
-                        <br>3. <strong>Complete registration</strong> with required documents
-                        <br>4. <strong>Make payment</strong> as per the fee structure
-                        <br>5. <strong>Start learning</strong> with your batch
-                        <br>Our team will guide you through every step of the enrollment process.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag"><i class="fas fa-phone-alt"></i> Get In Touch</span>
-                <h2 class="section-title">Start Your <span class="highlight">SAP Journey</span></h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
-                        <div class="contact-details">
-                            <h4>WhatsApp</h4>
-                            <p>+91 63619 60059</p>
-                            <a href="https://wa.me/916361960059" target="_blank" class="contact-link">Chat Now <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-user-tie"></i></div>
-                        <div class="contact-details">
-                            <h4>Trainer</h4>
-                            <p>Akshay</p>
-                            <p class="contact-sub">SAP EAM / PM Consultant</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
-                        <div class="contact-details">
-                            <h4>Course Duration</h4>
-                            <p>3 Months</p>
-                            <p class="contact-sub">Comprehensive Training</p>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-award"></i></div>
-                        <div class="contact-details">
-                            <h4>Experience</h4>
-                            <p>7+ Years Industry</p>
-                            <p class="contact-sub">6+ Years in SAP EAM/PM</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-cta-box">
-                    <div class="cta-content">
-                        <h3>Ready to Transform Your Career?</h3>
-                        <p>Join our industry-oriented SAP S/4HANA training and take the first step towards becoming a certified SAP EAM/PM consultant.</p>
-                        <a href="https://wa.me/916361960059" target="_blank" class="btn btn-whatsapp-large">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>
-                                <strong>Enquire on WhatsApp</strong>
-                                <small>+91 63619 60059</small>
-                            </span>
-                        </a>
-                        <div class="cta-features">
-                            <span><i class="fas fa-check-circle"></i> Free Demo Available</span>
-                            <span><i class="fas fa-check-circle"></i> Flexible Batches</span>
-                            <span><i class="fas fa-check-circle"></i> Placement Support</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 15px;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    font-family: var(--font);
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="assets/logo.png" alt="Akshay SAP Institute" class="footer-logo">
-                    <p>Industry-Oriented SAP S/4HANA Training Institute specializing in SAP EAM (PM) & Enhanced WCM.</p>
-                    <div class="footer-social">
-                        <a href="https://wa.me/916361960059" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Trainer</a></li>
-                        <li><a href="#courses">Course Details</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Courses</h4>
-                    <ul>
-                        <li><a href="#">SAP EAM (PM)</a></li>
-                        <li><a href="#">Enhanced WCM</a></li>
-                        <li><a href="#">SAP S/4HANA</a></li>
-                        <li><a href="#">ABAP for Functional</a></li>
-                        <li><a href="#">Integration & APIs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><i class="fab fa-whatsapp"></i> +91 63619 60059</p>
-                    <p><i class="fas fa-user"></i> Akshay - Trainer</p>
-                    <a href="https://wa.me/916361960059" target="_blank" class="footer-whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Akshay SAP Institute. All Rights Reserved. | Industry-Oriented SAP Training</p>
-            </div>
-        </div>
-    </footer>
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    box-shadow: 0 4px 14px rgba(15, 118, 110, 0.35);
+}
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/916361960059" target="_blank" class="whatsapp-float" id="whatsappFloat">
-        <i class="fab fa-whatsapp"></i>
-        <span class="whatsapp-tooltip">Chat on WhatsApp</span>
-    </a>
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(15, 118, 110, 0.45);
+}
 
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.btn-outline:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.5);
+}
+
+.btn-light {
+    background: white;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.btn-light:hover {
+    background: var(--bg-light);
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    background: #25d366;
+    color: white;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.btn-whatsapp-nav:hover {
+    background: #128c7e;
+    transform: translateY(-1px);
+}
+
+.btn-whatsapp-large {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    border-radius: var(--radius-lg);
+    font-size: 16px;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+    transition: var(--transition);
+}
+
+.btn-whatsapp-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(37, 211, 102, 0.45);
+}
+
+.btn-whatsapp-large i {
+    font-size: 28px;
+}
+
+.btn-whatsapp-large span {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.btn-whatsapp-large strong {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.btn-whatsapp-large small {
+    font-size: 13px;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    box-shadow: var(--shadow-lg);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 44px;
+    width: auto;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+.brand-tagline {
+    font-size: 11px;
+    color: var(--text-light);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-medium);
+    position: relative;
+    padding: 4px 0;
+    transition: var(--transition);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 4px;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f766e 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1.5" fill="rgba(255,255,255,0.08)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.06)"/><circle cx="40" cy="70" r="2" fill="rgba(255,255,255,0.05)"/><circle cx="70" cy="80" r="1.5" fill="rgba(255,255,255,0.07)"/><circle cx="10" cy="60" r="1" fill="rgba(255,255,255,0.04)"/></svg>');
+    background-size: 200px 200px;
+    opacity: 0.6;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15,23,42,0.9) 0%, rgba(15,118,110,0.7) 100%);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50px;
+    color: var(--primary-light);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-badge i {
+    color: var(--accent);
+}
+
+.hero-title {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.hero-title .highlight {
+    background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.75);
+    max-width: 600px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.hero-companies {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 24px;
+}
+
+.hero-companies p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.company-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.company-name {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.company-name:hover {
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    animation: bounce 2s infinite;
+}
+
+.mouse {
+    width: 22px;
+    height: 36px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 2px;
+    animation: scrollWheel 2s infinite;
+}
+
+@keyframes scrollWheel {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(12px); opacity: 0; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ============================================
+   SECTION COMMON STYLES
+   ============================================ */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: rgba(15, 118, 110, 0.08);
+    color: var(--primary);
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.section-title {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.section-title .highlight {
+    color: var(--primary);
+}
+
+.section-desc {
+    font-size: 16px;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-header.light .section-title {
+    color: white;
+}
+
+.section-header.light .section-desc {
+    color: rgba(255,255,255,0.7);
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+.about {
+    padding: 100px 0;
+    background: var(--bg-white);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.03);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 24px 28px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.exp-number {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.exp-text {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.9;
+    margin-top: 2px;
+}
+
+.about-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.about-role {
+    font-size: 16px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.about-item {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary);
+    transition: var(--transition);
+}
+
+.about-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow);
+}
+
+.about-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+}
+
+.about-text h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.about-text p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ============================================
+   DURATION BANNER
+   ============================================ */
+.duration-banner {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    padding: 40px 0;
+}
+
+.duration-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.duration-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255,255,255,0.15);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+}
+
+.duration-text {
+    flex: 1;
+}
+
+.duration-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+}
+
+.duration-text p {
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
+}
+
+.duration-text strong {
+    color: var(--accent-light);
+}
+
+/* ============================================
+   HIGHLIGHTS SECTION
+   ============================================ */
+.highlights {
+    padding: 100px 0;
+    background: var(--bg-light);
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.highlight-card {
+    background: var(--bg-white);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.highlight-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+.highlight-card:hover::before {
+    transform: scaleX(1);
+}
+
+.highlight-card.featured {
+    border: 2px solid var(--primary);
+    background: linear-gradient(135deg, var(--bg-white), rgba(15,118,110,0.03));
+}
+
+.highlight-card.featured::before {
+    transform: scaleX(1);
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-light));
+}
+
+.highlight-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.highlight-card:hover .highlight-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.highlight-card h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ============================================
+   WHY JOIN SECTION
+   ============================================ */
+.why-join {
+    padding: 100px 0;
+    background: var(--bg-white);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.why-card {
+    background: var(--bg-white);
+    padding: 36px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+}
+
+.why-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    border-radius: 3px 3px 0 0;
+    transition: var(--transition);
+}
+
+.why-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.why-card:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+.why-card.wide {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(135deg, var(--bg-white), rgba(15,118,110,0.03));
+    border: 2px solid var(--primary);
+}
+
+.why-card.wide .why-icon {
+    min-width: 64px;
+    height: 64px;
+    font-size: 26px;
+}
+
+.why-card.wide h4 {
+    font-size: 20px;
+}
+
+.why-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.why-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ============================================
+   REFERRAL NETWORK
+   ============================================ */
+.referral-network {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    position: relative;
+    overflow: hidden;
+}
+
+.referral-network::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="30" cy="30" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="70" cy="60" r="1.5" fill="rgba(255,255,255,0.04)"/><circle cx="50" cy="80" r="1" fill="rgba(255,255,255,0.06)"/></svg>');
+    background-size: 150px 150px;
+}
+
+.referral-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.referral-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius);
+    padding: 32px 20px;
+    text-align: center;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.referral-card:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-4px);
+    border-color: var(--primary-light);
+}
+
+.referral-card.wide {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: linear-gradient(135deg, rgba(15,118,110,0.2), rgba(15,118,110,0.1));
+    border-color: var(--primary-light);
+}
+
+.referral-logo {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin: 0 auto 12px;
+}
+
+.referral-card.wide .referral-logo {
+    margin: 0;
+}
+
+.referral-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+.faq {
+    padding: 100px 0;
+    background: var(--bg-light);
+}
+
+.faq-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: var(--bg-white);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow);
+}
+
+.faq-item.active {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    background: none;
+    border: none;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    color: var(--primary);
+}
+
+.faq-question i {
+    color: var(--primary);
+    font-size: 14px;
+    transition: var(--transition);
+    min-width: 20px;
+    text-align: center;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 24px 20px;
+}
+
+.faq-answer p {
+    font-size: 14px;
+    color: var(--text-medium);
+    line-height: 1.8;
+}
+
+.faq-answer strong {
+    color: var(--primary);
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+.contact {
+    padding: 100px 0;
+    background: var(--bg-white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-card {
+    background: var(--bg-light);
+    padding: 28px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.contact-details h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.contact-details p {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.contact-sub {
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: var(--text-light) !important;
+    margin-top: 2px;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.contact-link:hover {
+    gap: 8px;
+}
+
+.contact-cta-box {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: var(--radius-xl);
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-cta-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.cta-content p {
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.cta-features {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.cta-features span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.cta-features i {
+    color: var(--accent-light);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background: #0f172a;
+    color: rgba(255,255,255,0.7);
+    padding: 60px 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 16px 0;
+    color: rgba(255,255,255,0.6);
+}
+
+.footer-logo {
+    height: 44px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-light);
+    padding-left: 4px;
+}
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-contact i {
+    color: var(--primary-light);
+    width: 20px;
+}
+
+.footer-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 12px 20px;
+    background: #25d366;
+    color: white;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.footer-whatsapp-btn:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+}
+
+/* ============================================
+   FLOATING WHATSAPP
+   ============================================ */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: var(--transition);
+    animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    background: var(--text-dark);
+    color: white;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    visibility: visible;
+    right: 75px;
+}
+
+@keyframes pulse-whatsapp {
+    0%, 100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
+}
+
+/* ============================================
+   BACK TO TOP
+   ============================================ */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 100px;
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-lg);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .about-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: rgba(255,255,255,0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border);
+        transform: translateY(-150%);
+        opacity: 0;
+        transition: var(--transition);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .hero-stats {
+        gap: 24px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .experience-badge {
+        right: 10px;
+        bottom: -10px;
+        padding: 16px 20px;
+    }
+
+    .exp-number {
+        font-size: 28px;
+    }
+
+    .duration-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .why-card.wide {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .back-to-top {
+        right: 30px;
+        bottom: 100px;
+    }
+
+    .whatsapp-float {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    .cta-features {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .company-logos {
+        gap: 8px;
+    }
+
+    .company-name {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .highlights-grid,
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .referral-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-cta-box {
+        padding: 32px 24px;
+    }
+
+    .btn-whatsapp-large {
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    .btn-whatsapp-large i {
+        font-size: 22px;
+    }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Smooth scroll behavior for Safari */
+@supports not (scroll-behavior: smooth) {
+    html {
+        scroll-behavior: auto;
+    }
+}
