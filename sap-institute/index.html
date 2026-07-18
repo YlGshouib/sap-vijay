@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <base target="_blank">
 <base target="_blank">
 </head>
 <body>
@@ -15,7 +16,9 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-brand">
-                <img src="assets/logo.png" alt="Akshay SAP Institute" class="logo-img">
+                <div class="logo-placeholder">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
                 <div class="brand-text">
                     <span class="brand-name">Akshay SAP Institute</span>
                     <span class="brand-tagline">Industry-Oriented SAP Training</span>
@@ -111,7 +114,10 @@
             <div class="about-grid">
                 <div class="about-image">
                     <div class="image-wrapper">
-                        <img src="assets/trainer.jpg" alt="Akshay - SAP EAM Trainer">
+                        <div class="trainer-placeholder">
+                            <i class="fas fa-user-tie"></i>
+                            <span>Akshay</span>
+                        </div>
                         <div class="experience-badge">
                             <span class="exp-number">7+</span>
                             <span class="exp-text">Years<br>Experience</span>
@@ -172,7 +178,7 @@
         </div>
     </section>
 
-    <!-- Course Highlights -->
+    <!-- Course Highlights with 3D Laptop Mockups -->
     <section class="highlights" id="highlights">
         <div class="container">
             <div class="section-header">
@@ -181,66 +187,213 @@
                 <p class="section-desc">A comprehensive curriculum designed for real-world SAP implementation success</p>
             </div>
             <div class="highlights-grid">
+
+                <!-- Card 1: SAP S/4HANA Architecture -->
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-server"></i></div>
-                    <h4>SAP S/4HANA Architecture</h4>
-                    <p>Deep dive into S/4HANA architecture, in-memory computing, and digital core concepts</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/3_Understanding_the_Architecture_of.png" alt="SAP S/4HANA Architecture">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>SAP S/4HANA Architecture</h4>
+                        <p>Deep dive into S/4HANA architecture, in-memory computing, and digital core concepts</p>
+                    </div>
                 </div>
+
+                <!-- Card 2: Front-End & Back-End Process Flow -->
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-exchange-alt"></i></div>
-                    <h4>Front-End & Back-End Process Flow</h4>
-                    <p>Complete understanding of end-to-end process flows and system interactions</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/8_Architecture_Of_S_4_HANA_vs_ERP_SAP.png" alt="SAP Front-End Back-End Flow">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>Front-End & Back-End Process Flow</h4>
+                        <p>Complete understanding of end-to-end process flows and system interactions</p>
+                    </div>
                 </div>
+
+                <!-- Card 3: SAP Fiori & SAP GUI -->
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-desktop"></i></div>
-                    <h4>SAP Fiori & SAP GUI</h4>
-                    <p>Hands-on with modern Fiori UX and classic SAP GUI interfaces</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/7_SAP_s_UI_Technologies_supporting.png" alt="SAP Fiori UI">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>SAP Fiori & SAP GUI</h4>
+                        <p>Hands-on with modern Fiori UX and classic SAP GUI interfaces</p>
+                    </div>
                 </div>
+
+                <!-- Card 4: SAP Gateway & OData -->
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-cloud"></i></div>
-                    <h4>SAP Gateway & OData Concepts</h4>
-                    <p>Integration concepts, OData services, and Gateway architecture</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/6_SAP_S_4HANA_Cloud_EDI_Integration.png" alt="SAP Gateway OData">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>SAP Gateway & OData Concepts</h4>
+                        <p>Integration concepts, OData services, and Gateway architecture</p>
+                    </div>
                 </div>
+
+                <!-- Card 5: Database & Data Flow -->
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-database"></i></div>
-                    <h4>Database & Data Flow</h4>
-                    <p>Understanding HANA database, data modeling, and flow architecture</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/4_Data_Flow_SAP_Help_Portal.png" alt="SAP Database Data Flow">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>Database & Data Flow</h4>
+                        <p>Understanding HANA database, data modeling, and flow architecture</p>
+                    </div>
                 </div>
+
+                <!-- Card 6: Backend Configuration (SPRO) -->
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-cogs"></i></div>
-                    <h4>Backend Configuration (SPRO)</h4>
-                    <p>Complete SPRO configuration for EAM and PM modules</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/4_How_to_play_within_SPRO_Screen_SAP.png" alt="SAP SPRO Configuration">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>Backend Configuration (SPRO)</h4>
+                        <p>Complete SPRO configuration for EAM and PM modules</p>
+                    </div>
                 </div>
+
+                <!-- Card 7: SAP EAM (Plant Maintenance) - FEATURED -->
                 <div class="highlight-card featured">
-                    <div class="highlight-icon"><i class="fas fa-tools"></i></div>
-                    <h4>SAP EAM (Plant Maintenance)</h4>
-                    <p>Complete PM module covering work orders, notifications, maintenance plans, and more</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/1_SAP_PM_Course_in_Dubai_SAP_Training.png" alt="SAP EAM PM">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                        <div class="featured-badge">Core Module</div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>SAP EAM (Plant Maintenance)</h4>
+                        <p>Complete PM module covering work orders, notifications, maintenance plans, and more</p>
+                    </div>
                 </div>
+
+                <!-- Card 8: Enhanced WCM - FEATURED -->
                 <div class="highlight-card featured">
-                    <div class="highlight-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h4>Enhanced Work Clearance Management</h4>
-                    <p>WCM processes, safety permits, lockout-tagout, and industrial safety integration</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/3_Work_Clearance_Management_Overview.png" alt="Enhanced WCM">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                        <div class="featured-badge">Core Module</div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>Enhanced Work Clearance Management</h4>
+                        <p>WCM processes, safety permits, lockout-tagout, and industrial safety integration</p>
+                    </div>
                 </div>
+
+                <!-- Card 9: ABAP for Functional -->
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-code"></i></div>
-                    <h4>ABAP for Functional Consultants</h4>
-                    <p>Essential ABAP concepts every functional consultant should know</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/5_Skills_for_SAP_Consultants_ABAP_Debugging.png" alt="ABAP Programming">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>ABAP for Functional Consultants</h4>
+                        <p>Essential ABAP concepts every functional consultant should know</p>
+                    </div>
                 </div>
+
+                <!-- Card 10: Debugging, User Exits & BAdIs -->
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-bug"></i></div>
-                    <h4>Debugging, User Exits & BAdIs</h4>
-                    <p>Advanced debugging techniques, enhancement framework, and custom developments</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/10_The_New_ABAP_Debugger_Part_3_ITPFE.png" alt="ABAP Debugging">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>Debugging, User Exits & BAdIs</h4>
+                        <p>Advanced debugging techniques, enhancement framework, and custom developments</p>
+                    </div>
                 </div>
+
+                <!-- Card 11: APIs, IDocs & Integrations -->
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-plug"></i></div>
-                    <h4>APIs, IDocs & Integrations</h4>
-                    <p>System integration using APIs, IDoc processing, and middleware concepts</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/6_SAP_S_4HANA_Cloud_EDI_Integration.png" alt="SAP APIs IDocs">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>APIs, IDocs & Integrations</h4>
+                        <p>System integration using APIs, IDoc processing, and middleware concepts</p>
+                    </div>
                 </div>
+
+                <!-- Card 12: Real-Time Implementation -->
                 <div class="highlight-card">
-                    <div class="highlight-icon"><i class="fas fa-project-diagram"></i></div>
-                    <h4>Real-Time Implementation Scenarios</h4>
-                    <p>Live project scenarios from actual SAP implementations and support cases</p>
+                    <div class="laptop-mockup">
+                        <div class="laptop-frame">
+                            <div class="laptop-screen">
+                                <img src="assets/1_Agile_SAP_Implementation_Projects.png" alt="SAP Implementation">
+                            </div>
+                            <div class="laptop-base"></div>
+                            <div class="laptop-shadow"></div>
+                        </div>
+                    </div>
+                    <div class="highlight-content">
+                        <h4>Real-Time Implementation Scenarios</h4>
+                        <p>Live project scenarios from actual SAP implementations and support cases</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -598,7 +751,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="assets/logo.png" alt="Akshay SAP Institute" class="footer-logo">
+                    <div class="footer-logo-placeholder">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Akshay SAP</span>
+                    </div>
                     <p>Industry-Oriented SAP S/4HANA Training Institute specializing in SAP EAM (PM) & Enhanced WCM.</p>
                     <div class="footer-social">
                         <a href="https://wa.me/916361960059" target="_blank"><i class="fab fa-whatsapp"></i></a>
